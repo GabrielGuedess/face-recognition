@@ -8,5 +8,5 @@ def compare_faces(file1, file2):
     image1_encoding = fr.face_encodings(image1)[0]
     image2_encoding = fr.face_encodings(image2)[0]
 
-    results = fr.compare_faces([image1_encoding], image2_encoding)
+    results = fr.compare_faces([image1_encoding], image2_encoding, 0.5)
     return results[0]
